@@ -182,9 +182,9 @@
 //    #define  DEFAULT_Ki 2.25
 //    #define  DEFAULT_Kd 440
 // Re-D-bot CoreXY
-    #define  DEFAULT_Kp 26.91
-    #define  DEFAULT_Ki 2.03
-    #define  DEFAULT_Kd 89.29
+    #define  DEFAULT_Kp 24.34
+    #define  DEFAULT_Ki 1.65
+    #define  DEFAULT_Kd 89.80
 #endif // PIDTEMP
 
 // Bed Temperature Control
@@ -210,9 +210,9 @@
 #ifdef PIDTEMPBED
 //120v 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
 //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-    #define  DEFAULT_bedKp 10.00
-    #define  DEFAULT_bedKi .023
-    #define  DEFAULT_bedKd 305.4
+//    #define  DEFAULT_bedKp 10.00
+//    #define  DEFAULT_bedKi .023
+//    #define  DEFAULT_bedKd 305.4
 
 //120v 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
 //from pidautotune
@@ -221,6 +221,12 @@
 //    #define  DEFAULT_bedKd 1675.16
 
 // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
+
+// Cheap3d 300w 2-zone heater
+    #define  DEFAULT_bedKp 425.81
+    #define  DEFAULT_bedKi 83.840
+    #define  DEFAULT_bedKd 540.67
+
 #endif // PIDTEMPBED
 
 
@@ -539,7 +545,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 #define PLA_PREHEAT_FAN_SPEED 0   // Insert Value between 0 and 255
 
 #define ABS_PREHEAT_HOTEND_TEMP 235
-#define ABS_PREHEAT_HPB_TEMP 110
+#define ABS_PREHEAT_HPB_TEMP 100
 #define ABS_PREHEAT_FAN_SPEED 0   // Insert Value between 0 and 255
 
 //LCD and SD support
